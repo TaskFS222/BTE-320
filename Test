@@ -1,1 +1,59 @@
-Test
+import random
+userinput=input("Would you like to keep playing? (Yes or No)")
+while userinput == "Yes":
+  LUSUCKPoints = 0
+  DAMNITLETTHEPCWIN = 0
+
+  while True:
+    a = "Computer Wins"
+    b = "User wins"
+    c = "draw"
+    User_Input = str(input("Enter rock, paper, or scissors")).lower()
+    pc_choice = random.choice(['rock','paper','scissors'])
+    print(pc_choice)
+    print(User_Input)
+    if (User_Input == "rock" and pc_choice == "paper") or (User_Input == "paper" and pc_choice == "scissors") or (User_Input == "scissors" and pc_choice == "rock"):
+      print(a)
+      DAMNITLETTHEPCWIN +=1
+      print(DAMNITLETTHEPCWIN)
+    elif pc_choice == User_Input:
+      print (c)
+    else:
+      print(b)
+      LUSUCKPoints +=1
+      print(LUSUCKPoints)
+    if DAMNITLETTHEPCWIN ==2:
+      print("LMAO! Take your L")
+      break;
+    elif LUSUCKPoints ==2:
+      print("WHY DO YOU HATE ME")
+      break;
+  userinput=input("Would you like to keep playing? (Yes or No)")
+while userinput=="No":
+  print("There is only one correct choice. You still lose...")
+userinput=input("Would you like to keep playing? (Yes or No)")
+while True:
+  a = "Computer Wins"
+  b = "User wins"
+  c = "draw"
+  User_Input = str(input("Enter rock, paper, or scissors")).lower()
+  pc_choice = random.choice(['rock','paper','scissors'])
+  print(pc_choice)
+  print(User_Input)
+  if (User_Input == "rock" and pc_choice == "paper") or (User_Input == "paper" and pc_choice == "scissors") or (User_Input == "scissors" and pc_choice == "rock"):
+    print(a)
+    DAMNITLETTHEPCWIN +=1
+    print(DAMNITLETTHEPCWIN)
+  elif pc_choice == User_Input:
+    print (c)
+  else:
+    print(b)
+    LUSUCKPoints +=1
+    print(LUSUCKPoints)
+  if DAMNITLETTHEPCWIN ==2:
+    print("LMAO! Take your L")
+    break;
+  elif LUSUCKPoints ==2:
+    print("WHY DO YOU HATE ME")
+    break;
+userinput=input("Would you like to keep playing? (Yes or No)")
